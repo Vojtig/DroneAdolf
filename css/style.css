@@ -394,3 +394,69 @@ h1, h2, h3 {
   color: var(--color-text);
   line-height: 1;
 }
+
+/* ---------- Kontakt ---------- */
+.kontakt { background: var(--color-bg-alt); }
+
+.kontakt__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-5);
+}
+
+.kontakt__title { text-align: left; }
+
+.kontakt__details {
+  margin-top: var(--spacing-3);
+  color: var(--color-text-muted);
+}
+
+.kontakt__details li { padding: var(--spacing-1) 0; }
+.kontakt__details a:hover { color: var(--color-accent); }
+
+.kontakt__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.kontakt__form label {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-top: var(--spacing-2);
+}
+
+.kontakt__form input,
+.kontakt__form textarea {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--spacing-2);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+.kontakt__form input:focus,
+.kontakt__form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.kontakt__submit {
+  margin-top: var(--spacing-3);
+  align-self: flex-start;
+}
+
+.kontakt__status {
+  min-height: 1.5em;
+  font-size: 0.9rem;
+}
+
+.kontakt__status--success { color: #4caf50; }
+.kontakt__status--error { color: #e05555; }
+
+@media (max-width: 768px) {
+  .kontakt__inner {
+    grid-template-columns: 1fr;
+  }
+}

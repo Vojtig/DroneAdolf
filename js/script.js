@@ -51,7 +51,43 @@ function initLightbox() {
   });
 }
 
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  // TODO: replace YOUR_FORM_ID with the real Formspree form id
+  // (create a form at https://formspree.io and copy its endpoint here).
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = 'Odesílám…';
+    status.className = 'kontakt__status';
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form),
+      });
+
+      if (response.ok) {
+        status.textContent = 'Děkuji, poptávka byla odeslána!';
+        status.className = 'kontakt__status kontakt__status--success';
+        form.reset();
+      } else {
+        status.textContent = 'Odeslání se nezdařilo, zkuste to prosím znovu.';
+        status.className = 'kontakt__status kontakt__status--error';
+      }
+    } catch (err) {
+      status.textContent = 'Odeslání se nezdařilo, zkontrolujte připojení.';
+      status.className = 'kontakt__status kontakt__status--error';
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initLightbox();
+  initContactForm();
 });
