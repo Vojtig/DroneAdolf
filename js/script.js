@@ -23,21 +23,30 @@ function initLightbox() {
   const lightboxImage = document.getElementById('lightbox-image');
   const closeBtn = document.getElementById('lightbox-close');
   const items = document.querySelectorAll('.portfolio__item');
+  let triggeringElement = null;
 
   function open(src, alt) {
     lightboxImage.src = src;
     lightboxImage.alt = alt;
     lightbox.hidden = false;
+    // Move focus to close button
+    closeBtn.focus();
   }
 
   function close() {
     lightbox.hidden = true;
     lightboxImage.src = '';
+    // Restore focus to the element that triggered the open
+    if (triggeringElement) {
+      triggeringElement.focus();
+    }
   }
 
   items.forEach(item => {
     item.addEventListener('click', () => {
       const img = item.querySelector('img');
+      // Store the element that triggered the open
+      triggeringElement = item;
       open(item.dataset.full, img.alt);
     });
   });

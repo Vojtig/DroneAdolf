@@ -92,10 +92,6 @@
       </div>
     </section>
 
-    <div class="lightbox" id="lightbox" hidden>
-      <button class="lightbox__close" id="lightbox-close" aria-label="Zavřít">&times;</button>
-      <img class="lightbox__image" id="lightbox-image" src="" alt="">
-    </div>
     <section id="cenik" class="section cenik">
       <div class="section__inner">
         <h2 class="section__title">Služby a ceník</h2>
@@ -196,6 +192,11 @@
   <footer class="site-footer">
     <p>&copy; 2026 DroneAdolf. Všechna práva vyhrazena.</p>
   </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" hidden>
+    <button class="lightbox__close" id="lightbox-close" aria-label="Zavřít">&times;</button>
+    <img class="lightbox__image" id="lightbox-image" src="" alt="">
+  </div>
 
   <script src="js/script.js"></script>
 </body>

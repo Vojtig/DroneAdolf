@@ -148,10 +148,14 @@ h1, h2, h3 {
     background: var(--color-bg-alt);
     border-bottom: 1px solid var(--color-border);
     transform: translateY(-150%);
-    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, visibility 0.25s ease;
+    visibility: hidden;
   }
 
-  .nav.is-open { transform: translateY(0); }
+  .nav.is-open {
+    transform: translateY(0);
+    visibility: visible;
+  }
 
   .nav__list {
     flex-direction: column;
