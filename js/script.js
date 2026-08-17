@@ -95,8 +95,33 @@ function initContactForm() {
   });
 }
 
+function initThemeToggle() {
+  const toggle = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    toggle.setAttribute('aria-pressed', String(theme === 'light'));
+    toggle.setAttribute(
+      'aria-label',
+      theme === 'light' ? 'Přepnout na tmavý režim' : 'Přepnout na světlý režim'
+    );
+  }
+
+  const stored = localStorage.getItem('theme');
+  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  applyTheme(stored || (prefersLight ? 'light' : 'dark'));
+
+  toggle.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', next);
+    applyTheme(next);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initLightbox();
   initContactForm();
+  initThemeToggle();
 });

@@ -16,6 +16,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   --color-accent: #ff8c00;
   --color-accent-dark: #cc7000;
   --color-border: #2b2b2b;
+  --color-header-bg: rgba(13, 13, 13, 0.85);
 
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -28,6 +29,16 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   --spacing-6: 6rem;
 
   --max-width: 1200px;
+}
+
+:root[data-theme="light"] {
+  --color-bg: #f7f5f2;
+  --color-bg-alt: #ffffff;
+  --color-bg-card: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5a5a5a;
+  --color-border: #e0ddd7;
+  --color-header-bg: rgba(255, 255, 255, 0.85);
 }
 
 body {
@@ -74,7 +85,7 @@ h1, h2, h3 {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(13, 13, 13, 0.85);
+  background: var(--color-header-bg);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--color-border);
 }
@@ -118,6 +129,31 @@ h1, h2, h3 {
 }
 
 .nav__link--cta:hover { background: var(--color-accent-dark); color: #0d0d0d; }
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--color-text);
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover { background: var(--color-bg-card); }
+
+.theme-toggle__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.theme-toggle__icon--sun { display: none; }
+.theme-toggle__icon--moon { display: block; }
+
+:root[data-theme="light"] .theme-toggle__icon--sun { display: block; }
+:root[data-theme="light"] .theme-toggle__icon--moon { display: none; }
 
 .hamburger {
   display: none;
@@ -195,7 +231,7 @@ h1, h2, h3 {
   justify-content: center;
   text-align: center;
   padding: 0 var(--spacing-3);
-  background: radial-gradient(circle at 50% 30%, var(--color-bg-alt), var(--color-bg) 70%);
+  background: radial-gradient(circle at 50% 30%, #161616, #0d0d0d 70%);
   overflow: hidden;
 }
 
@@ -211,10 +247,10 @@ h1, h2, h3 {
   border-radius: 12px;
   background: repeating-linear-gradient(
     45deg,
-    var(--color-bg-alt),
-    var(--color-bg-alt) 20px,
-    var(--color-bg) 20px,
-    var(--color-bg) 40px
+    #161616,
+    #161616 20px,
+    #0d0d0d 20px,
+    #0d0d0d 40px
   );
 }
 
@@ -233,7 +269,7 @@ h1, h2, h3 {
 
 .hero__video-placeholder-caption {
   font-size: 0.875rem;
-  color: var(--color-text-muted);
+  color: #b3b3b3;
 }
 
 .hero__overlay {
@@ -247,6 +283,7 @@ h1, h2, h3 {
   position: relative;
   z-index: 1;
   max-width: 700px;
+  color: #f2f2f2;
 }
 
 .hero__title {
@@ -257,7 +294,7 @@ h1, h2, h3 {
 
 .hero__subtitle {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--color-text-muted);
+  color: #b3b3b3;
   margin-bottom: var(--spacing-4);
 }
 
