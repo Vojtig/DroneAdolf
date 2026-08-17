@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#241a0d"/>
+  <rect width="800" height="600" fill="none" stroke="#ff8c00" stroke-width="4" stroke-dasharray="12 10"/>
+  <text x="400" y="290" font-family="sans-serif" font-size="28" fill="#ff8c00" text-anchor="middle">Ukázka záběru 01</text>
+  <text x="400" y="330" font-family="sans-serif" font-size="16" fill="#b3b3b3" text-anchor="middle">placeholder — nahraďte vlastní fotkou</text>
+</svg>

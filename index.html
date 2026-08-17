@@ -66,7 +66,36 @@
         </div>
       </div>
     </section>
-    <section id="portfolio" class="section portfolio"></section>
+    <section id="portfolio" class="section portfolio">
+      <div class="section__inner">
+        <h2 class="section__title">Portfolio</h2>
+        <div class="portfolio__grid" id="portfolio-grid">
+          <button class="portfolio__item" data-full="assets/images/placeholder-01.svg">
+            <img src="assets/images/placeholder-01.svg" alt="Ukázka leteckého záběru 01" loading="lazy">
+          </button>
+          <button class="portfolio__item" data-full="assets/images/placeholder-02.svg">
+            <img src="assets/images/placeholder-02.svg" alt="Ukázka leteckého záběru 02" loading="lazy">
+          </button>
+          <button class="portfolio__item" data-full="assets/images/placeholder-03.svg">
+            <img src="assets/images/placeholder-03.svg" alt="Ukázka leteckého záběru 03" loading="lazy">
+          </button>
+          <button class="portfolio__item" data-full="assets/images/placeholder-04.svg">
+            <img src="assets/images/placeholder-04.svg" alt="Ukázka leteckého záběru 04" loading="lazy">
+          </button>
+          <button class="portfolio__item" data-full="assets/images/placeholder-05.svg">
+            <img src="assets/images/placeholder-05.svg" alt="Ukázka leteckého záběru 05" loading="lazy">
+          </button>
+          <button class="portfolio__item" data-full="assets/images/placeholder-06.svg">
+            <img src="assets/images/placeholder-06.svg" alt="Ukázka leteckého záběru 06" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox__close" id="lightbox-close" aria-label="Zavřít">&times;</button>
+      <img class="lightbox__image" id="lightbox-image" src="" alt="">
+    </div>
     <section id="cenik" class="section cenik">
       <div class="section__inner">
         <h2 class="section__title">Služby a ceník</h2>

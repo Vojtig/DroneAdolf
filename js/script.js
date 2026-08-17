@@ -18,6 +18,40 @@ function initNav() {
   });
 }
 
+function initLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const closeBtn = document.getElementById('lightbox-close');
+  const items = document.querySelectorAll('.portfolio__item');
+
+  function open(src, alt) {
+    lightboxImage.src = src;
+    lightboxImage.alt = alt;
+    lightbox.hidden = false;
+  }
+
+  function close() {
+    lightbox.hidden = true;
+    lightboxImage.src = '';
+  }
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img');
+      open(item.dataset.full, img.alt);
+    });
+  });
+
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox.hidden) close();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
+  initLightbox();
 });
