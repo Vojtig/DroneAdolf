@@ -199,6 +199,43 @@ h1, h2, h3 {
   overflow: hidden;
 }
 
+.hero__video-placeholder {
+  position: absolute;
+  inset: var(--spacing-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1);
+  border: 3px dashed var(--color-accent);
+  border-radius: 12px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-bg-alt),
+    var(--color-bg-alt) 20px,
+    var(--color-bg) 20px,
+    var(--color-bg) 40px
+  );
+}
+
+.hero__play-icon {
+  width: clamp(48px, 8vw, 84px);
+  height: clamp(48px, 8vw, 84px);
+  color: var(--color-accent);
+}
+
+.hero__video-placeholder-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: var(--color-accent);
+}
+
+.hero__video-placeholder-caption {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
 .hero__overlay {
   position: absolute;
   inset: 0;
