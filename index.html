@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DroneAdolf — Letecké video a foto z dronu</title>
+  <meta name="description" content="Profesionální natáčení videí a focení fotek dronem. Svatby, nemovitosti, reklama, eventy — zachytíme to z výšky.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="#hero" class="logo">Drone<span class="logo__accent">Adolf</span></a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list" id="nav-list">
+          <li><a href="#o-sluzbe" class="nav__link">O službě</a></li>
+          <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+          <li><a href="#cenik" class="nav__link">Ceník</a></li>
+          <li><a href="#o-mne" class="nav__link">O mně</a></li>
+          <li><a href="#kontakt" class="nav__link nav__link--cta">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="nav-list">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="section hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">Váš svět z<br>ptačí perspektivy</h1>
+        <p class="hero__subtitle">Profesionální letecké video a foto z dronu — svatby, nemovitosti, eventy i reklama.</p>
+        <a href="#kontakt" class="btn hero__cta">Nezávazná poptávka</a>
+      </div>
+    </section>
+    <section id="o-sluzbe" class="section o-sluzbe">
+      <div class="section__inner">
+        <h2 class="section__title">O službě</h2>
+        <p class="o-sluzbe__lead">
+          Nabízím profesionální letecké natáčení a fotografování dronem
+          DJI s certifikací pro provoz v ČR. Ať už potřebujete zachytit
+          svatbu z výšky, prezentovat nemovitost, nebo natočit reklamní
+          spot — postarám se o kompletní realizaci od plánování letu až
+          po finální střih.
+        </p>
+        <div class="o-sluzbe__grid">
+          <div class="o-sluzbe__item">
+            <h3>Letecké video</h3>
+            <p>4K záběry, dynamické průlety, profesionální střih a barevné korekce.</p>
+          </div>
+          <div class="o-sluzbe__item">
+            <h3>Letecké foto</h3>
+            <p>Vysoké rozlišení, HDR, panoramata — ideální pro nemovitosti a eventy.</p>
+          </div>
+          <div class="o-sluzbe__item">
+            <h3>Mapování a inspekce</h3>
+            <p>Ortofotomapy, 3D modely a inspekce staveb, střech a pozemků z výšky.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio" class="section portfolio">
+      <div class="section__inner">
+        <h2 class="section__title">Portfolio</h2>
+        <div class="portfolio__grid" id="portfolio-grid">
+          <button class="portfolio__item" data-full="assets/images/placeholder-01.svg">
+            <img src="assets/images/placeholder-01.svg" alt="Ukázka leteckého záběru 01" loading="lazy">
+          </button>
+          <button class="portfolio__item" data-full="assets/images/placeholder-02.svg">
+            <img src="assets/images/placeholder-02.svg" alt="Ukázka leteckého záběru 02" loading="lazy">
+          </button>
+          <button class="portfolio__item" data-full="assets/images/placeholder-03.svg">
+            <img src="assets/images/placeholder-03.svg" alt="Ukázka leteckého záběru 03" loading="lazy">
+          </button>
+          <button class="portfolio__item" data-full="assets/images/placeholder-04.svg">
+            <img src="assets/images/placeholder-04.svg" alt="Ukázka leteckého záběru 04" loading="lazy">
+          </button>
+          <button class="portfolio__item" data-full="assets/images/placeholder-05.svg">
+            <img src="assets/images/placeholder-05.svg" alt="Ukázka leteckého záběru 05" loading="lazy">
+          </button>
+          <button class="portfolio__item" data-full="assets/images/placeholder-06.svg">
+            <img src="assets/images/placeholder-06.svg" alt="Ukázka leteckého záběru 06" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="cenik" class="section cenik">
+      <div class="section__inner">
+        <h2 class="section__title">Služby a ceník</h2>
+        <div class="cenik__grid">
+          <div class="cenik__card">
+            <h3>Základní</h3>
+            <p class="cenik__price">od 2 500 Kč</p>
+            <ul class="cenik__list">
+              <li>Až 30 minut letu</li>
+              <li>10 upravených fotek</li>
+              <li>Předání do 3 dnů</li>
+            </ul>
+            <a href="#kontakt" class="btn cenik__cta">Poptat</a>
+          </div>
+          <div class="cenik__card cenik__card--featured">
+            <p class="cenik__badge">Nejoblíbenější</p>
+            <h3>Střední</h3>
+            <p class="cenik__price">od 5 900 Kč</p>
+            <ul class="cenik__list">
+              <li>Až 1 hodina letu</li>
+              <li>Video do 3 minut + 20 fotek</li>
+              <li>Barevné korekce a hudba</li>
+              <li>Předání do 5 dnů</li>
+            </ul>
+            <a href="#kontakt" class="btn cenik__cta">Poptat</a>
+          </div>
+          <div class="cenik__card">
+            <h3>Prémium</h3>
+            <p class="cenik__price">od 12 900 Kč</p>
+            <ul class="cenik__list">
+              <li>Celodenní natáčení</li>
+              <li>Video do 10 minut + 40 fotek</li>
+              <li>Kompletní postprodukce</li>
+              <li>Předání do 10 dnů</li>
+            </ul>
+            <a href="#kontakt" class="btn cenik__cta">Poptat</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="o-mne" class="section o-mne">
+      <div class="section__inner">
+        <h2 class="section__title">O mně</h2>
+        <p class="o-mne__bio">
+          Jmenuji se Adolf a dronům se věnuji posledních 5 let. Mám za sebou
+          desítky svatebních, komerčních i realitních zakázek po celé ČR.
+          Létám s certifikací UAS a pojištěním odpovědnosti, takže se
+          můžete spolehnout na bezpečné a profesionální provedení.
+        </p>
+        <div class="o-mne__refs">
+          <blockquote class="o-mne__ref">
+            <p>"Záběry z naší svatby předčily očekávání, moc děkujeme!"</p>
+            <cite>— Petra a Jakub</cite>
+          </blockquote>
+          <blockquote class="o-mne__ref">
+            <p>"Rychlé, profesionální a fotky prodaly nemovitost během týdne."</p>
+            <cite>— Realitní kancelář Nova</cite>
+          </blockquote>
+          <blockquote class="o-mne__ref">
+            <p>"Skvělá komunikace a naprosto spolehlivá práce."</p>
+            <cite>— Firma Eventix</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    <section id="kontakt" class="section kontakt">
+      <div class="section__inner kontakt__inner">
+        <div class="kontakt__info">
+          <h2 class="section__title kontakt__title">Kontakt</h2>
+          <p>Máte zájem o natáčení nebo focení dronem? Napište mi nebo
+          zavolejte — ozvu se do 24 hodin.</p>
+          <ul class="kontakt__details">
+            <li>📞 <a href="tel:+420777123456">+420 777 123 456</a></li>
+            <li>✉️ <a href="mailto:info@droneadolf.cz">info@droneadolf.cz</a></li>
+            <li>📍 Působím po celé ČR</li>
+          </ul>
+        </div>
+        <form class="kontakt__form" id="contact-form">
+          <label for="name">Jméno</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Telefon</label>
+          <input type="tel" id="phone" name="phone">
+
+          <label for="message">Zpráva</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit" class="btn kontakt__submit">Odeslat poptávku</button>
+          <p class="kontakt__status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 DroneAdolf. Všechna práva vyhrazena.</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" hidden>
+    <button class="lightbox__close" id="lightbox-close" aria-label="Zavřít">&times;</button>
+    <img class="lightbox__image" id="lightbox-image" src="" alt="">
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
