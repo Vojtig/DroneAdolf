@@ -460,3 +460,18 @@ h1, h2, h3 {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- Global polish ---------- */
+html { scroll-padding-top: 70px; }
+
+::selection {
+  background: var(--color-accent);
+  color: #0d0d0d;
+}
+
+body::-webkit-scrollbar { width: 10px; }
+body::-webkit-scrollbar-track { background: var(--color-bg); }
+body::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 5px;
+}
