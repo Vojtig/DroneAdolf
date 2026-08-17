@@ -181,3 +181,43 @@ h1, h2, h3 {
   font-size: 0.875rem;
   border-top: 1px solid var(--color-border);
 }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 var(--spacing-3);
+  background: radial-gradient(circle at 50% 30%, var(--color-bg-alt), var(--color-bg) 70%);
+  overflow: hidden;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13,13,13,0.2) 0%, rgba(13,13,13,0.85) 100%);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero__title {
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  font-weight: 800;
+  margin-bottom: var(--spacing-3);
+}
+
+.hero__subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-4);
+}
+
+.hero__cta { font-size: 1.1rem; }
